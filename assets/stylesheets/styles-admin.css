@@ -1,0 +1,49 @@
+/* line 1, ../sass/styles-admin.scss */
+.admin-menu {
+  box-shadow: 0 0 3px;
+}
+/* line 4, ../sass/styles-admin.scss */
+.admin-menu ul li {
+  display: inline;
+}
+/* line 6, ../sass/styles-admin.scss */
+.admin-menu ul li a {
+  margin: 5px 0;
+  border: solid 1px #ccc;
+  padding: 5px 15px;
+}
+/* line 10, ../sass/styles-admin.scss */
+.admin-menu ul li a:hover {
+  background: #ccc;
+}
+/* line 17, ../sass/styles-admin.scss */
+.admin-menu input, .admin-menu button {
+  margin: 5px 0;
+  padding: 5px 10px;
+}
+/* line 21, ../sass/styles-admin.scss */
+.admin-menu input {
+  width: 120px;
+}
+/* line 24, ../sass/styles-admin.scss */
+.admin-menu .admin-right {
+  text-align: right;
+}
+
+/* line 29, ../sass/styles-admin.scss */
+.fixed {
+  width: 100%;
+  position: fixed;
+  z-index: 99999999;
+  background: #f1f1f1;
+}
+
+/* line 37, ../sass/styles-admin.scss */
+.welcome-section textarea, .welcome-section button {
+  width: 100%;
+}
+/* line 40, ../sass/styles-admin.scss */
+.welcome-section textarea {
+  min-height: 200px;
+  resize: none;
+}

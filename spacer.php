@@ -1,0 +1,1 @@
+<section class="spacer" style="height:<?php echo $var; ?>px" >&nbsp;</section>
