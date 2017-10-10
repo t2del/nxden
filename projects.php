@@ -1,38 +1,44 @@
-<section id="portfolio" class="portfolio-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-title text-center">
-                        <h2>Projects</h2>
-                        <?php spacer(20); // number is the height of spacer in px ?> 
-                    </div>                        
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    
-                    <!-- Start Portfolio items -->
-                    <ul id="portfolio-list">
-                    	<?php	
-                            $qry_proj = "select * from project order by project_name ASC";
-							$result_project = $conn->query($qry_proj);
-							while($project = $result_project->fetch_assoc())
-							{
-						?>
-                        <li>
-                            <div class="portfolio-item">
-                                <img src="assets/images/portfolio/<?php echo $project['imgurl']; ?>" class="img-responsive" alt="" />
-                                <div class="portfolio-caption">
-                                    <h4><?php echo $project['project_name']; ?></h4>
-                                    <a href="#portfolio-modal-<?php echo $project['project_id']; ?>" data-toggle="modal" class="link-1" title="About - <?php echo $project['project_name']; ?>"><i class="fa fa-magic"></i></a>
-                                    <a href="http://<?php echo $project['project_site']; ?>" class="link-2" target="_blank" title="View site"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                        </li>
-                        <?php } ?>
-                    </ul>
-                    <!-- End Portfolio items -->
-                </div>
-            </div>
-        </div>
+<section id="portfolio" class="portfolio-section post featured">
+	<header class="major">
+            <h2>Projects</h2>
+            <div class="filters text-center">
+				<ul class="nav nav-pills">
+					<li class="active">
+                    	<a href="#" class="button special" data-filter="*">All</a>
+                    </li>
+                    <?php	
+                   	$qry_proj_type = "select * from project_type order by project_type_id ASC";
+					$result_project_type = $conn->query($qry_proj_type);
+					while($project_type = $result_project_type->fetch_assoc())
+					{
+						echo '<li><a href="#" class="button special" data-filter=".'.$project_type['project_type'].'">'.$project_type['project_title'].'</a></li>';
+					}
+					?>
+				</ul>
+			</div>
+            <?php spacer(20); // number is the height of spacer in px ?>
+            
+             
+    </header>
+    
+   	<article>
+		<!-- portfolio items start -->
+        <div class="isotope-container row grid-space-20">
+            <?php	
+            $qry_proj = "select * from project order by project_name ASC";
+            $result_project = $conn->query($qry_proj);
+            while($project = $result_project->fetch_assoc())
+            {
+                include('project_box.php');
+            }
+            ?>
+        </div>	
+		<!-- portfolio items end -->
+        
+        
+    </article>
+    
+    <div class="row"></div>
 </section>
+
+           

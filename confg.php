@@ -20,6 +20,6 @@ if (mysqli_connect_errno()) // Check connection
 $basefile=basename($_SERVER['PHP_SELF'], ".php");
 $samndean = array("21232f297a57a5a743894a0e4a801fc3"=>"4b022d7323df2ea12538faeb5e64cdef", "b4feb0cbb4b232a9321cf09c802b7ca24cb2c09c"=>"fbcc55b742478406f06342b1ddfd32c5a91a1901");
 include('functions-public.php');
-include('admin/functions-admin.php');
-include('process-admin.php');
+// include('admin/functions-admin.php');
+// include('process-admin.php');
 ?>

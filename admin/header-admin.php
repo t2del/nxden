@@ -19,7 +19,7 @@
         <div class="row admin-menu">
         	<?php spacer(10); ?>
         	<div class="container">
-                <div class="col-sm-8 main-link">
+                <div class="col-sm-8 col-xs-12 main-link">
                     <ul>
                         <li><a href="./" class="page-scroll waves-effect"><i class="fa fa-fw fa-home"></i><span>NxDen.com</span></a></li>
                         <li><a href="#about-us" class="page-scroll waves-effect"><i class="fa fa-fw fa-user"></i><span>About Us</span></a></li>
@@ -28,7 +28,7 @@
                         <li><a href="#contact" class="page-scroll waves-effect"><i class="fa fa-fw fa-envelope-o"></i><span>Contact</span></a></li>        
                     </ul>
                 </div>
-                <div class="col-sm-4 login-profile"><?php include('login-form.php'); ?></div>
+                <div class="col-sm-4 col-xs-12 login-profile"><?php include('login-form.php'); ?></div>
             </div>
             <?php spacer(10); ?>
     	</div>

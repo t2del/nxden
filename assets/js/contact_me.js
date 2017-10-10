@@ -30,8 +30,8 @@ $(function() {
                 success: function() {
                     // Success message
                     $('#success').html("<div class='alert alert-success'>");
-                    $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-                        .append("</button>");
+                    $('#success > .alert-success').html("<a type='button' class='close icon alt fa-close' data-dismiss='alert' aria-hidden='true'>")
+                        .append("</a>");
                     $('#success > .alert-success')
                         .append("<strong>Your message has been sent. </strong>");
                     $('#success > .alert-success')
